@@ -1,1 +1,21 @@
-/**/
+:root {
+    --site-color-1: #1C1C1C;
+    --site-color-2: #48ACF0;
+    --site-color-3: #558564;
+    --site-color-4: #379634;
+    --site-color-5: #ECEBE4;
+}
+
+#site-top-navbar {
+    background-color: var(--site-color-1);
+    display: flex;
+}
+
+.nav a {
+    color: var(--site-color-5);
+    transition: color 0.5s ease;
+}
+
+.nav a:hover {
+    color: var(--site-color-4);
+}
