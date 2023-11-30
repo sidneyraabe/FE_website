@@ -19,3 +19,7 @@
 .nav a:hover {
     color: var(--site-color-4);
 }
+
+.nav a.active:hover{
+    color: var(--site-color-1);
+}
