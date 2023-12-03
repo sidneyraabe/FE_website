@@ -8,11 +8,9 @@
 
 p,
 label,
-li,
-a {
+li {
     font-family: 'Noto Sans Display', Arial, Helvetica, sans-serif;
 }
-
 
 #site-top-navbar {
     background-color: var(--site-color-1);
@@ -38,6 +36,7 @@ p {
 .nav a {
     color: var(--site-color-5);
     transition: color 0.5s ease;
+    font-family: 'Nova Square', sans-serif, Arial, Helvetica, sans-serif;
 
 }
 
