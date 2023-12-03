@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display&family=Nova+Square&display=swap"
+        rel="stylesheet">
+    <style>
+        #submit {
+            color: var(--site-color-5);
+            background-color: var(--site-color-1);
+            transition: color 0.5s ease;
+        }
+
+        #submit:hover {
+            color: var(--site-color-1)
+        }
+    </style>
+</head>
+
+<body>
+    <span class="pagespan"></span>
+    <header>
+        <!--Nav bar start-->
+        <div class="justify-content-center" id="site-top-navbar">
+            <ul class="nav justify-content-center nav-fill nav-pills col-lg-8">
+                <li class="nav-item">
+                    <a class="nav-link" href="home.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="facts.html">Flat Earth Facts</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="news.html">News</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="chat.html">Chat</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="faq.html">FAQ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="meet-the-team.html">Meet the Team</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="contact-us.html">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+        <!--Nav bar end-->
+    </header>
+    <main>
+        <h1 class="text-center mt-5">Contact Us</h1>
+        <div class="container-lg mt-5 mb-5">
+            <form class="row g-3">
+                <div class="col-md-6">
+                    <label for="inputFirstName" class="form-label">First Name</label>
+                    <input type="password" class="form-control" id="inputFirstName">
+                </div>
+                <div class="col-md-6"> <!-- password input type in first,last,email is JOKE... is it funny?-->
+                    <label for="inputLastName" class="form-label">Last Name</label>
+                    <input type="password" class="form-control" id="inputLastName">
+                </div>
+                <div class="col-12">
+                    <label for="inputEmail" class="form-label">Email</label>
+                    <input type="password" class="form-control" id="inputEmail">
+                </div>
+                <div class="col-12">
+                    <label for="inputMessage" class="form-label">Message</label>
+                    <input type="text" class="form-control " id="inputMessage" style="height:250px; text-align:left"
+                        placeholder="Give us a piece of your flat mind...">
+                </div>
+                <div class="col-12 pt-3 text-right">
+                    <button type="submit" class="btn" id="submit">Send</button>
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+
+</html>
