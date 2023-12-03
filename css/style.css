@@ -84,8 +84,10 @@ i {
     background-color: var(--site-color-3) !important;
 }
 
-input {
+input,
+textarea {
     background-color: var(--site-color-1) !important;
+    color: var(--site-color-5) !important;
 }
 
 hr {

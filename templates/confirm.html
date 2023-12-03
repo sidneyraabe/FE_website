@@ -14,18 +14,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display&family=Nova+Square&display=swap"
         rel="stylesheet">
     <style>
-        #submit {
-            color: var(--site-color-5);
-            background-color: var(--site-color-1);
-            transition: color 0.5s ease;
+        main {
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
         }
 
-        #submit:hover {
-            color: var(--site-color-1)
+        h2 {
+            margin-bottom: 25vh;
         }
 
-        form>div {
-            margin-bottom: 20px;
+        html {
+            overflow: hidden;
         }
     </style>
 </head>
@@ -62,32 +65,7 @@
         <!--Nav bar end-->
     </header>
     <main>
-        <h1 class="text-center mt-5">Contact Us</h1>
-        <div class="container-lg mt-5 mb-5 " style="max-width: 600px;">
-            <form class="row g-3 semi-trans" action="confirm.html" method="GET">
-                <div class="col-md-6">
-                    <label for="inputFirstName" class="form-label">First Name</label>
-                    <input type="text" class="form-control" id="inputFirstName">
-                </div>
-                <div class="col-md-6"> <!-- password input type in first,last,email is JOKE... is it funny?-->
-                    <label for="inputLastName" class="form-label">Last Name</label>
-                    <input type="text" class="form-control" id="inputLastName">
-                </div>
-                <div class="col-12">
-                    <label for="inputEmail" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="inputEmail" required placeholder="mail@example.com">
-                </div>
-                <div class="col-12">
-                    <label for="inputMessage" class="form-label">Message</label>
-                    <textarea class="form-control" id="inputMessage"
-                        style="height: 250px; text-align: left; vertical-align: top !important;"
-                        placeholder="Give us a piece of your flat mind..." required></textarea>
-                </div>
-                <div class="col-12 pt-3 text-right">
-                    <button type="submit" class="btn" id="submit">Send</button>
-                </div>
-            </form>
-        </div>
+        <h2 class="text-center mt-5" style="width: 70vw">Thank you for your response!</h2>
     </main>
     <footer>
 
