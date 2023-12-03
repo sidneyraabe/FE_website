@@ -8,14 +8,19 @@
     <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display&family=Nova+Square&display=swap"
+        rel="stylesheet">
     <style>
-        #submit{
+        #submit {
             color: var(--site-color-5);
             background-color: var(--site-color-1);
             transition: color 0.5s ease;
         }
 
-        #submit:hover{
+        #submit:hover {
             color: var(--site-color-4)
         }
     </style>
@@ -53,28 +58,29 @@
     </header>
     <main>
         <h1 class="text-center mt-5">Contact Us</h1>
-        <div class = "container-lg mt-5 mb-5">
-        <form class="row g-3">
-            <div class="col-md-6">
-              <label for="inputFirstName" class="form-label">First Name</label>
-              <input type="password" class="form-control" id="inputFirstName">
-            </div>
-            <div class="col-md-6"> <!-- password input type in first,last,email is JOKE... is it funny?-->
-              <label for="inputLastName" class="form-label">Last Name</label>
-              <input type="password" class="form-control" id="inputLastName">
-            </div>
-            <div class="col-12">
-              <label for="inputEmail" class="form-label">Email</label>
-              <input type="password" class="form-control" id="inputEmail">
-            </div>
-            <div class="col-12">
-              <label for="inputMessage" class="form-label">Message</label>
-              <input type="text" class="form-control " id="inputMessage" style = "height:250px; text-align:left" placeholder="Give us a piece of your flat mind...">
-            </div>
-            <div class="col-12 pt-3 text-right">
-                <button type="submit" class="btn" id = "submit">Send</button>
-            </div>
-        </form>
+        <div class="container-lg mt-5 mb-5">
+            <form class="row g-3">
+                <div class="col-md-6">
+                    <label for="inputFirstName" class="form-label">First Name</label>
+                    <input type="password" class="form-control" id="inputFirstName">
+                </div>
+                <div class="col-md-6"> <!-- password input type in first,last,email is JOKE... is it funny?-->
+                    <label for="inputLastName" class="form-label">Last Name</label>
+                    <input type="password" class="form-control" id="inputLastName">
+                </div>
+                <div class="col-12">
+                    <label for="inputEmail" class="form-label">Email</label>
+                    <input type="password" class="form-control" id="inputEmail">
+                </div>
+                <div class="col-12">
+                    <label for="inputMessage" class="form-label">Message</label>
+                    <input type="text" class="form-control " id="inputMessage" style="height:250px; text-align:left"
+                        placeholder="Give us a piece of your flat mind...">
+                </div>
+                <div class="col-12 pt-3 text-right">
+                    <button type="submit" class="btn" id="submit">Send</button>
+                </div>
+            </form>
         </div>
     </main>
     <footer>

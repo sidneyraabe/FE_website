@@ -8,6 +8,11 @@
     <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display&family=Nova+Square&display=swap"
+        rel="stylesheet">
     <style>
         .team-member {
             text-align: center;
@@ -15,12 +20,25 @@
         }
 
         .team-member img {
-            width: 150px; /* Adjust the size*/
-            border-radius: 50%; 
+            width: 150px;
+            /* Adjust the size*/
+            border-radius: 50%;
         }
 
         .team-members-container {
-            margin-top: 250px; /* Adjust the top margin*/
+            margin-top: 50px;
+            margin-bottom: 100px;
+            /* Adjust the top margin*/
+        }
+
+        .title-font {
+            margin-top: 10px;
+            font-size: 30px;
+        }
+
+        .person-description {
+            width: 85%;
+            margin: auto;
         }
     </style>
 </head>
@@ -57,31 +75,38 @@
     </header>
     <main>
         <section class="team-members-container">
-            <h1 class="text-center">Meet the Team</h1>
+            <h1 class="text-center">Meet the Team</h1><br><br>
             <div class="row justify-content-center">
                 <!-- Team members 1, 2, and 3 -->
                 <div class="col-md-3 team-member">
                     <img src="../images/team-member-1.png" alt="Team Member 1">
-                    <p>Short description of Team Member 1.</p>
+                    <p class="title-font">Sidney Raabe</p>
+                    <p class="person-description">Everyone's favorite doctor, engineer, karate master, school teacher,
+                        plumber, office worker, pizza delivery guy, preacher, soldier, policeman, astronaut and
+                        firefighter, now is a web developer as well!</p>
                 </div>
                 <div class="col-md-3 team-member">
                     <img src="../images/team-member-2.png" alt="Team Member 2">
-                    <p>Short description of Team Member 2.</p>
+                    <p class="title-font">Name</p>
+                    <p class="person-description">Short description of Team Member 2.</p>
                 </div>
                 <div class="col-md-3 team-member">
                     <img src="../images/team-member-3.png" alt="Team Member 3">
-                    <p>Short description of Team Member 3.</p>
+                    <p class="title-font">Name</p>
+                    <p class="person-description">Short description of Team Member 3.</p>
                 </div>
             </div>
             <div class="row justify-content-center">
                 <!-- Team members 4 and 5 -->
                 <div class="col-md-3 team-member">
                     <img src="../images/team-member-4.png" alt="Team Member 4">
-                    <p>Short description of Team Member 4.</p>
+                    <p class="title-font">Name</p>
+                    <p class="person-description">Short description of Team Member 4.</p>
                 </div>
                 <div class="col-md-3 team-member">
                     <img src="../images/team-member-5.png" alt="Team Member 5">
-                    <p>Short description of Team Member 5.</p>
+                    <p class="title-font">Name</p>
+                    <p class="person-description">Short description of Team Member 5.</p>
                 </div>
             </div>
         </section>

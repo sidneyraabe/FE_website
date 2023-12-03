@@ -6,20 +6,45 @@
     --site-color-5: #ECEBE4;
 }
 
+p,
+label,
+li,
+a {
+    font-family: 'Noto Sans Display', Arial, Helvetica, sans-serif;
+}
+
+
 #site-top-navbar {
     background-color: var(--site-color-1);
     display: flex;
+    font-family: 'Nova Square', sans-serif, Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-size: 5rem !important;
+}
+
+h1,
+h2,
+h3,
+.title-font {
+    font-family: 'Nova Square', sans-serif, Arial, Helvetica, sans-serif;
+}
+
+p {
+    font-family: 'Noto Sans Display', Arial, Helvetica, sans-serif;
 }
 
 .nav a {
     color: var(--site-color-5);
     transition: color 0.5s ease;
+
 }
 
 .nav a:hover {
     color: var(--site-color-4);
 }
 
-.nav a.active:hover{
+.nav a.active:hover {
     color: var(--site-color-1);
 }
