@@ -12,3 +12,4 @@ https://sidneyraabe.github.io/FE_website/templates/chat.html
 https://sidneyraabe.github.io/FE_website/templates/faq.html
 https://sidneyraabe.github.io/FE_website/templates/meet-the-team.html
 https://sidneyraabe.github.io/FE_website/templates/contact-us.html
+https://sidneyraabe.github.io/FE_website/templates/confirm.html
