@@ -49,7 +49,8 @@ h1 {
 h1,
 h2,
 h3,
-.title-font {
+.title-font,
+i {
     font-family: 'Nova Square', sans-serif, Arial, Helvetica, sans-serif;
     color: var(--site-color-5);
 }
@@ -75,4 +76,8 @@ h3,
 
 input {
     background-color: var(--site-color-1) !important;
+}
+
+hr {
+    border-color: var(--site-color-5) !important;
 }
