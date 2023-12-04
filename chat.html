@@ -73,6 +73,10 @@
             max-width: 400px;
             border-radius: 10px;
         }
+
+        .colormegreen {
+            color: var(--site-color-3);
+        }
     </style>
 </head>
 
@@ -111,12 +115,13 @@
 
     <!-- Chatroom section -->
     <main>
-        <h1 class="text-center mt-5">Chatroom</h1>
+        <h1 class="text-center mt-5">Chat</h1>
 
         <div class="container-lg mt-5 mb-5" style="max-width: 600px;">
             <div class="row">
 
                 <div id="messages-container" style="width: 100%; max-height: 60vh; overflow-y: auto;">
+                    <p class="colormegreen text-center">Send a message to spark the conversation!</p>
                     <div id="messages" style="width: 100%;"></div>
                 </div>
 
@@ -169,8 +174,11 @@
                 // Append the message element to the messages container
                 messages.appendChild(messageElement);
 
-                // Scroll to the bottom of the messages
-                messages.scrollTop = messages.scrollHeight;
+                // Use requestAnimationFrame to ensure the scrolling occurs after the DOM update
+                requestAnimationFrame(() => {
+                    // Scroll to the bottom of the messages
+                    messages.scrollTop = messages.scrollHeight;
+                });
 
                 // Clear the message box
                 messageBox.value = '';
@@ -216,6 +224,7 @@
                     }
                 }
             };
+
             init();
         })();
     </script>
