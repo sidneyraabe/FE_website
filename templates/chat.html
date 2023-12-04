@@ -125,6 +125,7 @@
     if (message !== '') {
         const data = message instanceof Blob ? message : message.toString();
         ws.send(data);
+        showMessage(`You: ${message}`);
     }
 }
 
