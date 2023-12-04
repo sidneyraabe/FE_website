@@ -16,7 +16,7 @@
     <style>
         #submit {
             color: var(--site-color-5);
-            background-color: var(--site-color-1);
+            background-color: var(--site-color-2) !important;
             transition: color 0.5s ease;
         }
 
@@ -30,6 +30,10 @@
 
         label {
             color: var(--site-color-2);
+        }
+
+        .redAsterisk {
+            color: red;
         }
     </style>
 </head>
@@ -78,11 +82,11 @@
                     <input type="text" class="form-control" id="inputLastName">
                 </div>
                 <div class="col-12">
-                    <label for="inputEmail" class="form-label">Email</label>
+                    <label for="inputEmail" class="form-label">Email<span class="redAsterisk"> *</span></label>
                     <input type="email" class="form-control" id="inputEmail" required placeholder="mail@example.com">
                 </div>
                 <div class="col-12">
-                    <label for="inputMessage" class="form-label">Message</label>
+                    <label for="inputMessage" class="form-label">Message<span class="redAsterisk"> *</span></label>
                     <textarea class="form-control" id="inputMessage"
                         style="height: 250px; text-align: left; vertical-align: top !important;"
                         placeholder="Give us a piece of your flat mind..." required></textarea>
