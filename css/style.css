@@ -7,6 +7,7 @@
 
 }
 
+
 * {
     background-color: var(--site-color-1);
 }
@@ -20,6 +21,7 @@ div[class^="container"] {
 .semi-trans {
     background-color: rgba(28, 28, 28, .60) !important;
 }
+
 
 .trans {
     background-color: rgba(0, 0, 0, 0) !important;
@@ -93,4 +95,24 @@ textarea {
 
 hr {
     border-color: var(--site-color-5) !important;
+}
+
+footer {
+    padding: 0 !important;
+    margin-bottom: 0px !important;
+    bottom: 0;
+    width: auto;
+    background: rgba(0, 0, 0, 0) !important;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
 }
