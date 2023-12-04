@@ -31,6 +31,16 @@
             display: inline-block;
             max-width: 80%;
         }
+
+        /*selector for sent messages*/
+        #messages>div:not(.important) {
+            color: white;
+        }
+
+        /*selector for received messages*/
+        #messages>div.important {
+            color: green;
+        }
     </style>
 </head>
 
@@ -90,13 +100,34 @@
             let ws;
 
             function showMessage(message) {
-      messages.textContent += `\n\n${message}`;
-      messages.scrollTop = messages.scrollHeight;
-      messageBox.value = '';
-    }
+                const messageElement = document.createElement('div');
 
+                try {
+                    // Try parsing the message as JSON
+                    const parsedMessage = JSON.parse(message);
 
+                    // Check if the message includes a class
+                    if (parsedMessage.class) {
+                        // Apply the class to the message element
+                        messageElement.classList.add(parsedMessage.class);
+                    }
 
+                    // Set the message content
+                    messageElement.textContent = parsedMessage.content;
+                } catch (error) {
+                    // If parsing as JSON fails, treat it as plain text
+                    messageElement.textContent = message;
+                }
+
+                // Append the message element to the messages container
+                messages.appendChild(messageElement);
+
+                // Scroll to the bottom of the messages
+                messages.scrollTop = messages.scrollHeight;
+
+                // Clear the message box
+                messageBox.value = '';
+            }
 
             function init() {
                 if (ws) {
@@ -107,33 +138,36 @@
                 ws = new WebSocket('ws://localhost:6969');
                 ws.onopen = () => {
                     console.log('Connection opened!');
-                }
+                };
                 ws.onmessage = (event) => showMessage(event.data);
                 ws.onclose = function () {
                     ws = null;
-                }
+                };
+                ws.onerror = function (error) {
+                    console.error('WebSocket error:', error);
+                };
             }
-            
+
             sendBtn.onclick = function () {
-    if (!ws) {
-        showMessage("No WebSocket connection :(");
-        return;
-    }
+                if (!ws) {
+                    showMessage('No WebSocket connection :(');
+                    return;
+                }
 
-    const message = messageBox.value.trim();
+                const message = messageBox.value.trim();
 
-    if (message !== '') {
-        const data = message instanceof Blob ? message : message.toString();
-        ws.send(data);
-        showMessage(`You: ${message}`);
-    }
-}
+                if (message !== '') {
+                    // Include a class in the message (e.g., "important")
+                    const styledMessage = JSON.stringify({ class: 'important', content: message });
 
-
-
-
-
-
+                    try {
+                        ws.send(styledMessage);
+                        showMessage(`You: ${message}`);
+                    } catch (error) {
+                        console.error('Error sending message:', error);
+                    }
+                }
+            };
 
             init();
         })();
