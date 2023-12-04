@@ -54,6 +54,7 @@ label {
 
 h1 {
     font-size: 5rem !important;
+    text-decoration: underline;
 }
 
 h1,
