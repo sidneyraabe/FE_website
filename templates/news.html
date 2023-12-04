@@ -16,10 +16,49 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display&family=Nova+Square&display=swap"
     rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    button {
+      border: 0;
+      font-size: 30px;
+      transition: border 1s ease-in-out;
+      border-radius: 25px;
+      width: 50px;
+      height: 50px;
+    }
+
+    button:hover {
+      color: var(--site-color-1);
+      border: 1px solid var(--site-color-5);
+    }
+
+
+    .modal {
+      background: rgba(28, 28, 28, 0.7);
+    }
+
+    .modal-header {
+      padding-bottom: 0px;
+    }
+
+    .author {
+      color: var(--site-color-3);
+    }
+
+    ul {
+      margin-left: 50px;
+      margin-right: 50px;
+    }
+
+    .title-font,
+    .modal-title {
+      color: var(--site-color-2);
+    }
+  </style>
 </head>
 
 <body>
-  <span class="pagespan"></span>
+  <span class="pagespan" style="background-image: url('../images/flerf.png');"></span>
   <header>
     <!--Nav bar start-->
     <div class="justify-content-center" id="site-top-navbar">
@@ -51,32 +90,34 @@
   </header>
   <main>
     <h1 class="text-center mt-5">News</h1>
-    <div class="container-lg mt-5 mb-5">
+    <div class="container-lg mt-5 mb-5" style="max-width: 800px;">
       <ul style="list-style:none">
         <li>
-          <h3 class="title-font">Eartha Flathy Sells Seashells</h3>
-          <p>
-            Eartha Flathy, 3/14/2023
+          <h3 class="title-font">Kenneth Guzy Lost at Sea in Absurd Quest for Earth's Edge</h3>
+          <p class="author">
+            Ben Flatts, 11/30/2023
           </p>
-          <p>
-            sdf sd f s e gwegr we g e gw ef sdb d f wf bsdv by n y5ne gfbe rgbe rfb gb wtb wf b tb er gb dfb sfb rt
-            brtbrtbrtg r re gbr b bertb wrgb eg
-            sdf sd f s e gwegr we g e gw ef sdb d f wf bsdv by n y5ne gfbe rgbe rfb gb wtb wf b tb er gb dfb sfb rt
-            brtbrtbrtg r re gbr b bertb wrg...
+          <p class="">
+            In a plot twist wilder than the conspiracy theories he sought to unravel; Kenneth Guzy now finds himself
+            lost
+            at sea during his absurd quest to reach the mysterious edge of the world. Armed with a hat that may or may
+            not
+            have been enchanted for navigational purposes, our intrepid explorer set sail, leaving behind a trail of
+            bewildered onlookers....
           </p>
           <a href="" data-toggle="modal" data-target="#exampleModal1" class="text-right d-block">Read more...</a>
           <hr>
         </li>
         <li>
-          <h3 class="title-font">Eartha Flathy Sells Seashells</h3>
-          <p>
-            Eartha Flathy, 3/14/2023
+          <h3 class="title-font">Oil baron's Son Searches for the "Edge" of the Earth in Lavish Adventure</h3>
+          <p class="author">
+            Ellen Spacey, 8/22/2023
           </p>
           <p>
-            sdf sd f s e gwegr we g e gw ef sdb d f wf bsdv by n y5ne gfbe rgbe rfb gb wtb wf b tb er gb dfb sfb rt
-            brtbrtbrtg r re gbr b bertb wrgb eg
-            sdf sd f s e gwegr we g e gw ef sdb d f wf bsdv by n y5ne gfbe rgbe rfb gb wtb wf b tb er gb dfb sfb rt
-            brtbrtbrtg r re gbr b bertb wrg...
+            In an escapade that's turning heads faster than the Earth itself, the heir to an oil fortune has embarked
+            on a mission to find the mysterious edge of the world. Known for his extravagant lifestyle and an insatiable
+            curiosity, the oil tycoon's son is leaving no stone unturned....
+
           </p>
           <a href="" data-toggle="modal" data-target="#exampleModal" class="text-right d-block">Read more...</a>
           <hr>
@@ -88,35 +129,35 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h2 class="modal-title fs-4" id="exampleModalLabel">Eartha Flathy Sells Seashells</h2>
-            <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+            <h2 class="modal-title fs-4" id="exampleModalLabel" style="padding: 15px;">Oil baron's Son Searches for the
+              "Edge" of the Earth in Lavish Adventure
+              <br>
+              <p style="font-size: 1rem; padding-top: 10px" class="author">Ellen Spacey, 8/22/2023</p>
+            </h2>
+
+            <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
+              <i class="fa fa-times" aria-hidden="true"></i>
+            </button>
           </div>
-          <div class="modal-body">
-            <p>
-              sdf sd f s e gwegr we g e gw ef sdb d f wf bsdv by n y5ne gfbe rgbe rfb gb wtb wf b tb er gb dfb sfb rt
-              brtbrtbrtg r re gbr b bertb wrgb eg sdf sd f s e gwegr we g e gw ef sdb d f wf bsdv by n y5ne gfbe rgbe
-              rfb gb wtb wf b tb er gb dfb sfb rt brtbrtbrtg r re gbr b bertb wrgb eg
-              sdf sd f s e gwegr we g e gw ef sdb d f wf bsdv by n y5ne gfbe rgbe rfb gb wtb wf b tb er gb dfb sfb rt
-              brtbrtbrtg r re gbr b bertb wrgb eg sdf sd f s e gwegr we g e gw ef sdb d f wf bsdv by n y5ne gfbe rgbe
-              rfb gb wtb wf b tb er gb dfb sfb rt brtbrtbrtg r re gbr b bertb wrgb eg
-              sdf sd f s e gwegr we g e gw ef sdb d f wf bsdv by n y5ne gfbe rgbe rfb gb wtb wf b tb er gb dfb sfb rt
-              brtbrtbrtg r re gbr b bertb wrgb eg sdf sd f s e gwegr we g e gw ef sdb d f wf bsdv by n y5ne gfbe rgbe
-              rfb gb wtb wf b tb er gb dfb sfb rt brtbrtbrtg r re gbr b bertb wrgb eg
-              sdf sd f s e gwegr we g e gw ef sdb d f wf bsdv by n y5ne gfbe rgbe rfb gb wtb wf b tb er gb dfb sfb rt
-              brtbrtbrtg r re gbr b bertb wrgb eg sdf sd f s e gwegr we g e gw ef sdb d f wf bsdv by n y5ne gfbe rgbe
-              rfb gb wtb wf b tb er gb dfb sfb rt brtbrtbrtg r re gbr b bertb wrgb eg
-              sdf sd f s e gwegr we g e gw ef sdb d f wf bsdv by n y5ne gfbe rgbe rfb gb wtb wf b tb er gb dfb sfb rt
-              brtbrtbrtg r re gbr b bertb wrgb eg sdf sd f s e gwegr we g e gw ef sdb d f wf bsdv by n y5ne gfbe rgbe
-              rfb gb wtb wf b tb er gb dfb sfb rt brtbrtbrtg r re gbr b bertb wrgb eg
-              sdf sd f s e gwegr we g e gw ef sdb d f wf bsdv by n y5ne gfbe rgbe rfb gb wtb wf b tb er gb dfb sfb rt
-              brtbrtbrtg r re gbr b bertb wrgb eg sdf sd f s e gwegr we g e gw ef sdb d f wf bsdv by n y5ne gfbe rgbe
-              rfb gb wtb wf b tb er gb dfb sfb rt brtbrtbrtg r re gbr b bertb wrgb eg
-              sdf sd f s e gwegr we g e gw ef sdb d f wf bsdv by n y5ne gfbe rgbe rfb gb wtb wf b tb er gb dfb sfb rt
-              brtbrtbrtg r re gbr b bertb wrgb eg sdf sd f s e gwegr we g e gw ef sdb d f wf bsdv by n y5ne gfbe rgbe
-              rfb gb wtb wf b tb er gb dfb sfb rt brtbrtbrtg r re gbr b bertb wrgb eg
-              sdf sd f s e gwegr we g e gw ef sdb d f wf bsdv by n y5ne gfbe rgbe rfb gb wtb wf b tb er gb dfb sfb rt
-              brtbrtbrtg r re gbr b bertb wrgb eg sdf sd f s e gwegr we g e gw ef sdb d f wf bsdv by n y5ne gfbe rgbe
-              rfb gb wtb wf b tb er gb dfb sfb rt brtbrtbrtg r re gbr b bertb wrgb eg
+          <div class="modal-body text-justify">
+            <p style="padding: 15px;">
+              In an escapade that's turning heads faster than the Earth itself, the heir to an oil fortune has embarked
+              on a mission to find the mysterious edge of the world. Known for his extravagant lifestyle and an
+              insatiable curiosity, the oil tycoon's son is leaving no stone unturned.
+              Armed with a GPS, a hat, and an oversized magnifying glass, our intrepid explorer is on a quest that has
+              left even conspiracy theorists scratching their heads. Some speculate that he's searching for a secret
+              portal that leads to NASA HQ, while others think he might charter a boat himself and try and reach the
+              edge.
+              In addition to his globe-trotting adventures, the oil heir's son also wears the hat of the organization's
+              head of finances. And in a move that would make even Scrooge McDuck proud, he generously funds the entire
+              operation.
+              Critics argue that the funding could be better spent on, well, just about anything else. But our
+              adventurous oil scion remains undeterred, stating, "I want to know what's really at the edge of our world,
+              and I'm willing to spare no expense to find out."
+              The expedition, complete with private jets, luxury accommodations, and a team of experts, has become the
+              talk of the town. Whether this mission will unveil the Earth's hidden secrets or merely add another layer
+              to the ever-growing tapestry of absurdity is yet to be seen. One thing's for sure, though – the journey is
+              sure to be as wil
             </p>
           </div>
         </div>
@@ -127,35 +168,35 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h2 class="modal-title fs-4" id="exampleModalLabel1">Eartha Flathy Sells Seashells</h2>
-            <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+            <h2 class="modal-title fs-4" id="exampleModalLabel" style="padding: 15px;">Kenneth Guzy Lost at Sea in
+              Absurd Quest for Earth's Edge
+              <br>
+              <p style="font-size: 1rem; padding-top: 10px" class="author">Ben Flatts, 11/30/2023</p>
+            </h2>
+            <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
+              <i class="fa fa-times" aria-hidden="true"></i>
+            </button>
           </div>
-          <div class="modal-body">
-            <p>
-              sdf sd f s e gwegr we g e gw ef sdb d f wf bsdv by n y5ne gfbe rgbe rfb gb wtb wf b tb er gb dfb sfb rt
-              brtbrtbrtg r re gbr b bertb wrgb eg sdf sd f s e gwegr we g e gw ef sdb d f wf bsdv by n y5ne gfbe rgbe
-              rfb gb wtb wf b tb er gb dfb sfb rt brtbrtbrtg r re gbr b bertb wrgb eg
-              sdf sd f s e gwegr we g e gw ef sdb d f wf bsdv by n y5ne gfbe rgbe rfb gb wtb wf b tb er gb dfb sfb rt
-              brtbrtbrtg r re gbr b bertb wrgb eg sdf sd f s e gwegr we g e gw ef sdb d f wf bsdv by n y5ne gfbe rgbe
-              rfb gb wtb wf b tb er gb dfb sfb rt brtbrtbrtg r re gbr b bertb wrgb eg
-              sdf sd f s e gwegr we g e gw ef sdb d f wf bsdv by n y5ne gfbe rgbe rfb gb wtb wf b tb er gb dfb sfb rt
-              brtbrtbrtg r re gbr b bertb wrgb eg sdf sd f s e gwegr we g e gw ef sdb d f wf bsdv by n y5ne gfbe rgbe
-              rfb gb wtb wf b tb er gb dfb sfb rt brtbrtbrtg r re gbr b bertb wrgb eg
-              sdf sd f s e gwegr we g e gw ef sdb d f wf bsdv by n y5ne gfbe rgbe rfb gb wtb wf b tb er gb dfb sfb rt
-              brtbrtbrtg r re gbr b bertb wrgb eg sdf sd f s e gwegr we g e gw ef sdb d f wf bsdv by n y5ne gfbe rgbe
-              rfb gb wtb wf b tb er gb dfb sfb rt brtbrtbrtg r re gbr b bertb wrgb eg
-              sdf sd f s e gwegr we g e gw ef sdb d f wf bsdv by n y5ne gfbe rgbe rfb gb wtb wf b tb er gb dfb sfb rt
-              brtbrtbrtg r re gbr b bertb wrgb eg sdf sd f s e gwegr we g e gw ef sdb d f wf bsdv by n y5ne gfbe rgbe
-              rfb gb wtb wf b tb er gb dfb sfb rt brtbrtbrtg r re gbr b bertb wrgb eg
-              sdf sd f s e gwegr we g e gw ef sdb d f wf bsdv by n y5ne gfbe rgbe rfb gb wtb wf b tb er gb dfb sfb rt
-              brtbrtbrtg r re gbr b bertb wrgb eg sdf sd f s e gwegr we g e gw ef sdb d f wf bsdv by n y5ne gfbe rgbe
-              rfb gb wtb wf b tb er gb dfb sfb rt brtbrtbrtg r re gbr b bertb wrgb eg
-              sdf sd f s e gwegr we g e gw ef sdb d f wf bsdv by n y5ne gfbe rgbe rfb gb wtb wf b tb er gb dfb sfb rt
-              brtbrtbrtg r re gbr b bertb wrgb eg sdf sd f s e gwegr we g e gw ef sdb d f wf bsdv by n y5ne gfbe rgbe
-              rfb gb wtb wf b tb er gb dfb sfb rt brtbrtbrtg r re gbr b bertb wrgb eg
-              sdf sd f s e gwegr we g e gw ef sdb d f wf bsdv by n y5ne gfbe rgbe rfb gb wtb wf b tb er gb dfb sfb rt
-              brtbrtbrtg r re gbr b bertb wrgb eg sdf sd f s e gwegr we g e gw ef sdb d f wf bsdv by n y5ne gfbe rgbe
-              rfb gb wtb wf b tb er gb dfb sfb rt brtbrtbrtg r re gbr b bertb wrgb eg
+          <div class="modal-body text-justify">
+            <p class="" style="padding: 15px;">
+              In a plot twist wilder than the conspiracy theories he sought to unravel; Kenneth Guzy now finds himself
+              lost at sea during his absurd quest to reach the mysterious edge of the world. Armed with a hat that may
+              or may not have been enchanted for navigational purposes, our intrepid explorer set sail, leaving behind a
+              trail of bewildered onlookers.
+              Rumors abound about the whimsical reasons behind his maritime misadventure. Some speculate that he mistook
+              his yacht for a pirate ship and attempted a daring boarding, while others insist he was on a mission to
+              negotiate with the mythical sea creatures that guard the Earth's edge. One particularly imaginative theory
+              suggests that he believed the edge was located in international waters and set sail to fact check this.
+              Despite the high-tech navigation equipment at his disposal, it seems the oil tycoon's son may have taken a
+              wrong turn at the Bermuda Triangle or misplaced his oversized magnifying glass during an impromptu game of
+              hide-and-seek. The hat, though presumably enchanted, has yet to reveal its true navigational prowess.
+              As search parties scour the seas in pursuit of the eccentric heir, critics of his outlandish expedition
+              are seizing the opportunity to say, "We told you so." Some argue that the funding could have been better
+              spent on navigation lessons, while others are considering launching a Kickstarter campaign to buy him a
+              better GPS.
+              His spokesperson, however, remains optimistic, stating, "This is just a temporary setback in our quest for
+              knowledge. We believe he's on the right path – quite literally – and will resurface with groundbreaking
+              insights into the Earth's edge."
             </p>
           </div>
         </div>
@@ -163,7 +204,6 @@
     </div>
   </main>
   <footer>
-
   </footer>
 </body>
 

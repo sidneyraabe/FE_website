@@ -23,6 +23,7 @@
             width: 150px;
             /* Adjust the size*/
             border-radius: 50%;
+            border: 5px solid var(--site-color-2)
         }
 
         .team-members-container {
@@ -34,6 +35,7 @@
         .title-font {
             margin-top: 10px;
             font-size: 30px;
+            color: var(--site-color-2)
         }
 
         .person-description {
@@ -42,13 +44,19 @@
         }
 
         body {
-            overflow: hidden;
+            overflow-x: hidden;
+        }
+
+        section {
+            margin-bottom: 0 !important;
+            padding-bottom: 100px;
+
         }
     </style>
 </head>
 
 <body>
-    <span class="pagespan"></span>
+    <span class="pagespan" style="background-image: url('../images/flerf.png');"></span>
     <header>
         <!-- Nav bar start -->
         <div class="justify-content-center" id="site-top-navbar">
@@ -79,45 +87,61 @@
         <!-- Nav bar end -->
     </header>
     <main>
-        <section class="team-members-container">
-            <h1 class="text-center">Meet the Team</h1><br><br>
-            <div class="row justify-content-center">
-                <!-- Team members 1, 2, and 3 -->
-                <div class="col-md-3 team-member">
-                    <img src="../images/team-member-1.png" alt="Team Member 1">
-                    <p class="title-font">Sidney Raabe</p>
-                    <p class="person-description">Everyone's favorite doctor, engineer, karate master, school teacher,
-                        plumber, office worker, pizza delivery guy, preacher, soldier, policeman, astronaut and
-                        firefighter, now is a web developer as well!</p>
+        <div class="container text-center">
+            <section class="team-members-container semi-trans">
+                <h1 class="text-center">Meet the Team</h1><br><br>
+                <div class="row justify-content-center trans">
+                    <!-- Team members 1, 2, and 3 -->
+                    <div class="col-md-3 team-member trans">
+                        <img src="../images/team-member-1.png" alt="Team Member 1">
+                        <p class="title-font trans">Sidney Raabe</p>
+                        <p class="person-description trans">Everyone's favorite doctor, engineer, karate master, school
+                            teacher,
+                            plumber, office worker, pizza delivery guy, preacher, soldier, policeman, astronaut and
+                            firefighter, now is a web developer as well!</p>
+                    </div>
+                    <div class="col-md-3 team-member trans">
+                        <img src="../images/team-member-2.png" alt="Team Member 2">
+                        <p class="title-font trans">Thomas Moore</p>
+                        <p class="person-description trans">A seasoned viticulturist dedicated to the pursuit of
+                            knowledge.
+                            While widely respected in his field, he passionately advocates for the flat Earth society,
+                            causing
+                            discomfort among his colleagues.</p>
+                    </div>
+                    <div class="col-md-3 team-member trans">
+                        <img src="../images/team-member-3.png" alt="Team Member 3">
+                        <p class="title-font trans">Kenneth Guzy</p>
+                        <p class="person-description trans">The son of a wealthy oil tycoon, he dedicates much of his
+                            free time to
+                            exploring the "globe", driven by a quest to find its elusive edge. Serving as the head of
+                            finances he also
+                            generously funds the organization.</p>
+                    </div>
                 </div>
-                <div class="col-md-3 team-member">
-                    <img src="../images/team-member-2.png" alt="Team Member 2">
-                    <p class="title-font">Name</p>
-                    <p class="person-description">Short description of Team Member 2.</p>
+                <div class="row justify-content-center trans">
+                    <!-- Team members 4 and 5 -->
+                    <div class="col-md-3 team-member trans">
+                        <img src="../images/team-member-4.png" alt="Team Member 4">
+                        <p class="title-font trans">Damien Olsen</p>
+                        <p class="person-description trans">Head of HR at a large investment firm she spends most of her
+                            free time defending
+                            the flat earth society on twitter. Threatening legal action to those who might deserve it.
+                        </p>
+                    </div>
+                    <div class="col-md-3 team-member trans">
+                        <img src="../images/team-member-5.png" alt="Team Member 5">
+                        <p class="title-font trans">Jack Heineking</p>
+                        <p class="person-description trans">Recently hired into our IT department they spend their free
+                            time critqueing modern
+                            websites. They say that the most important thing in the world is the Shneiderman's Eight
+                            Golden Rules.</p>
+                    </div>
                 </div>
-                <div class="col-md-3 team-member">
-                    <img src="../images/team-member-3.png" alt="Team Member 3">
-                    <p class="title-font">Name</p>
-                    <p class="person-description">Short description of Team Member 3.</p>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <!-- Team members 4 and 5 -->
-                <div class="col-md-3 team-member">
-                    <img src="../images/team-member-4.png" alt="Team Member 4">
-                    <p class="title-font">Name</p>
-                    <p class="person-description">Short description of Team Member 4.</p>
-                </div>
-                <div class="col-md-3 team-member">
-                    <img src="../images/team-member-5.png" alt="Team Member 5">
-                    <p class="title-font">Name</p>
-                    <p class="person-description">Short description of Team Member 5.</p>
-                </div>
-            </div>
-        </section>
+            </section>
+        </div>
     </main>
     <footer>
     </footer>
 </body>
-
 </html>

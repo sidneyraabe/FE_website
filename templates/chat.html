@@ -12,7 +12,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display&family=Nova+Square&display=swap"
         rel="stylesheet">
-
     <style>
         #messages-container {
             padding: 10px;
@@ -51,7 +50,7 @@
 </head>
 
 <body>
-    <span class="pagespan"></span>
+    <span class="pagespan" style="background-image: '../images/flerf.png';"></span>
     <header>
         <!-- Nav bar start -->
         <div class="justify-content-center" id="site-top-navbar">
@@ -102,7 +101,6 @@
             const sendBtn = document.querySelector('#send');
             const messages = document.querySelector('#messages');
             const messageBox = document.querySelector('#messageBox');
-
             let ws;
 
             function showMessage(message) {
