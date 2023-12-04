@@ -12,7 +12,7 @@ Install the required packages, and run the server:
 
 ```
 npm install express ws
-run templates/server.js
+node templates/server.js
 ```
 
 The chat function is now operational.
