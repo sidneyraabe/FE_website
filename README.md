@@ -1,5 +1,6 @@
 # FE_website
-Satirical Flat Earth website for Human Interface Computing Kent course
+Satirical Flat Earth website for Human Interface Computing Kent course.
+
 Access here: https://sidneyraabe.github.io/FE_website/home.html
 
 ## Deployment
