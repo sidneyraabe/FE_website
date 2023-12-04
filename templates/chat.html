@@ -12,12 +12,47 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display&family=Nova+Square&display=swap"
         rel="stylesheet">
+    <style>
+        #messages-container {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            background-color: #f5f5f5;
+        }
+
+        .message-bubble {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 5px;
+            display: inline-block;
+            max-width: 80%;
+        }
+
+        /*selector for sent messages*/
+        #messages>div:not(.important) {
+            color: white;
+            background: green;
+            padding: 10px;
+            border: 1px solid rgb(34, 34, 34);
+        }
+
+        /*selector for received messages*/
+        #messages>div.important {
+            color: black;
+            background: grey;
+            padding: 10px;
+            border: 1px solid rgb(34, 34, 34);
+        }
+    </style>
 </head>
 
 <body>
     <span class="pagespan" style="background-image: '../images/flerf.png';"></span>
     <header>
-        <!--Nav bar start-->
+        <!-- Nav bar start -->
         <div class="justify-content-center" id="site-top-navbar">
             <ul class="nav justify-content-center nav-fill nav-pills col-lg-8">
                 <li class="nav-item">
@@ -43,23 +78,104 @@
                 </li>
             </ul>
         </div>
-        <!--Nav bar end-->
+        <!-- Nav bar end -->
     </header>
-    <main>
-        <section>
-            <article>
-
-            </article>
-            <article>
-
-            </article>
-            <article>
-
-            </article>
-        </section>
-    </main>
+    <!-- Chatroom section -->
     <footer>
+        <div class="row">
+            <div class="col-md-8">
+                <div id="messages-container">
+                    <div id="messages"></div>
+                </div>
+            </div>
+        </div>
     </footer>
+
+    <div id="message-input-container" class="d-flex">
+        <input type="text" id="messageBox" class="form-control mr-2" placeholder="Type your message here" />
+        <button id="send" class="btn btn-primary" title="Send">Send</button>
+    </div>
+
+    <script>
+        (function () {
+            const sendBtn = document.querySelector('#send');
+            const messages = document.querySelector('#messages');
+            const messageBox = document.querySelector('#messageBox');
+            let ws;
+
+            function showMessage(message) {
+                const messageElement = document.createElement('div');
+
+                try {
+                    // Try parsing the message as JSON
+                    const parsedMessage = JSON.parse(message);
+
+                    // Check if the message includes a class
+                    if (parsedMessage.class) {
+                        // Apply the class to the message element
+                        messageElement.classList.add(parsedMessage.class);
+                    }
+
+                    // Set the message content
+                    messageElement.textContent = parsedMessage.content;
+                } catch (error) {
+                    // If parsing as JSON fails, treat it as plain text
+                    messageElement.textContent = message;
+                }
+
+                // Append the message element to the messages container
+                messages.appendChild(messageElement);
+
+                // Scroll to the bottom of the messages
+                messages.scrollTop = messages.scrollHeight;
+
+                // Clear the message box
+                messageBox.value = '';
+            }
+
+            function init() {
+                if (ws) {
+                    ws.onerror = ws.onopen = ws.onclose = null;
+                    ws.close();
+                }
+
+                ws = new WebSocket('ws://localhost:6969');
+                ws.onopen = () => {
+                    console.log('Connection opened!');
+                };
+                ws.onmessage = (event) => showMessage(event.data);
+                ws.onclose = function () {
+                    ws = null;
+                };
+                ws.onerror = function (error) {
+                    console.error('WebSocket error:', error);
+                };
+            }
+
+            sendBtn.onclick = function () {
+                if (!ws) {
+                    showMessage('No WebSocket connection :(');
+                    return;
+                }
+
+                const message = messageBox.value.trim();
+
+                if (message !== '') {
+                    // Include a class in the message (e.g., "important")
+                    const styledMessage = JSON.stringify({ class: 'important', content: message });
+
+                    try {
+                        ws.send(styledMessage);
+                        showMessage(`You: ${message}`);
+                    } catch (error) {
+                        console.error('Error sending message:', error);
+                    }
+                }
+            };
+
+            init();
+        })();
+    </script>
 </body>
 
 </html>
