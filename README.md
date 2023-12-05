@@ -30,6 +30,6 @@ node server.js
 A confirmation message will appear in the console indicating that the server is running. 
 
 ### Step 3:
-Navigate to the chat page, (we recommend Live Server VSCode extension for ease of use), and copy the same page URL into as many separate tabs or windows desired. 
+Navigate to or refresh the chat page.
 
 Any sent message (green) will appear as a received message (grey) in the other connected tabs.
