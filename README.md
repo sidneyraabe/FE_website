@@ -3,13 +3,19 @@ Satirical Flat Earth website for Human Interface Computing Kent course.
 
 Access here: https://sidneyraabe.github.io/FE_website/home.html
 
+&nbsp;  &nbsp;
+
 ## Deployment
 Deployed through GitHub pages. All static pages are functional, except for the chat page, which depends on a local server instance, detailed below.
+
+&nbsp;  &nbsp;
 
 ## Data Backend
 Our contact page adds a row to a Google Sheets page upon completion. 
 
 The data can be viewed here: [TODO: put the sheets link here]
+
+&nbsp;  &nbsp;
 
 ## Running The Chat
 The Chat function is only available through the use of Express and WebSocket packages.
