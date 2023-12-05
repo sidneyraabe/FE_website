@@ -6,10 +6,13 @@ Access here: https://sidneyraabe.github.io/FE_website/home.html
 ## Deployment
 Deployed through GitHub pages. All static pages are functional, except for the chat page, which depends on a local server instance, detailed below.
 
+## Data Backend
+Our contact page adds a row to a Google Sheets page upon completion. 
+
+The data can be viewed here: [TODO: put the sheets link here]
+
 ## Running The Chat
 The Chat function is only available through the use of Express and WebSocket packages.
-
-
 
 ### Step 1:
 Open terminal, navigate to the base directory.
