@@ -72,29 +72,31 @@
     <main>
         <h1 class="text-center mt-5">Contact Us</h1>
         <div class="container-lg mt-5 mb-5 " style="max-width: 600px;">
-            <form class="row g-3 semi-trans" action="confirm.html" method="GET">
-                <div class="col-md-6">
-                    <label for="inputFirstName" class="form-label">First Name</label>
-                    <input type="text" class="form-control" id="inputFirstName">
-                </div>
-                <div class="col-md-6"> <!-- password input type in first,last,email is JOKE... is it funny?-->
-                    <label for="inputLastName" class="form-label">Last Name</label>
-                    <input type="text" class="form-control" id="inputLastName">
-                </div>
-                <div class="col-12">
-                    <label for="inputEmail" class="form-label">Email<span class="redAsterisk"> *</span></label>
-                    <input type="email" class="form-control" id="inputEmail" required placeholder="mail@example.com">
-                </div>
-                <div class="col-12">
-                    <label for="inputMessage" class="form-label">Message<span class="redAsterisk"> *</span></label>
-                    <textarea class="form-control" id="inputMessage"
-                        style="height: 250px; text-align: left; vertical-align: top !important;"
-                        placeholder="Give us a piece of your flat mind..." required></textarea>
-                </div>
-                <div class="col-12 pt-3 text-right">
-                    <button type="submit" class="btn" id="submit">Send</button>
-                </div>
-            </form>
+            <form 
+            method="POST" 
+            action="https://script.google.com/macros/s/AKfycbwoh612tycYOSG4Ps1oPlL6wHBresU56Z5LgWmb4zur9WDhjA5uPz-EVFMAD4h9q9jB/exec"
+            class="row g-3 semi-trans"
+          >
+            <div class="col-md-6">
+              <label for="inputFirstName" class="form-label">First Name</label>
+              <input type="text" class="form-control" id="inputFirstName" name="First Name" required placeholder="Your First Name">
+            </div>
+            <div class="col-md-6">
+              <label for="inputLastName" class="form-label">Last Name</label>
+              <input type="text" class="form-control" id="inputLastName" name="Last Name" required placeholder="Your Last Name">
+            </div>
+            <div class="col-12">
+              <label for="inputEmail" class="form-label">Email<span class="redAsterisk"> *</span></label>
+              <input type="email" class="form-control" id="inputEmail" name="Email" required placeholder="mail@example.com">
+            </div>
+            <div class="col-12">
+              <label for="inputMessage" class="form-label">Message<span class="redAsterisk"> *</span></label>
+              <textarea class="form-control" id="inputMessage" name="Message" style="height: 250px; text-align: left; vertical-align: top !important;" placeholder="Give us a piece of your flat mind..." required></textarea>
+            </div>
+            <div class="col-12 pt-3 text-right">
+              <button type="submit" class="btn" id="submit">Send</button>
+            </div>
+          </form>
         </div>
     </main>
     <footer>
