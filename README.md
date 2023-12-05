@@ -13,7 +13,7 @@ Deployed through GitHub pages. All static pages are functional, except for the c
 ## Data Backend
 Our contact page adds a row to a Google Sheets page upon completion. 
 
-The data can be viewed here: [TODO: put the sheets link here]
+The data can be viewed here: https://docs.google.com/spreadsheets/d/1Xh9t2rdoGCSQ9M_fYGPSqLidLhJx_nN-pq5pmOMTdlk/edit?usp=sharing
 
 &nbsp;  &nbsp;
 
